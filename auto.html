@@ -4,25 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>WiseAuto 车用干燥剂｜车灯防潮与凝露控制解决方案｜Wisepac 威胜科技</title>
-  <meta name="description" content="WiseAuto 车用干燥剂专为车灯起雾、凝露及内部湿度控制问题设计，可根据需求选择快速吸湿或慢速吸湿方案，适用于汽车车灯防潮应用。" />
-  <meta name="keywords" content="WiseAuto车用干燥剂,车灯干燥剂,汽车干燥剂,车灯防潮,车灯起雾,车灯凝露,车灯湿度控制" />
+  <title>WiseAuto 车用干燥剂｜车灯防雾控湿解决方案｜Wisepac 威胜科技</title>
+  <meta name="description" content="WiseAuto 车用干燥剂专为汽车车灯起雾、凝露和内部湿度控制设计，适用于前照灯、尾灯、信号灯等汽车灯具防潮应用。" />
+  <meta name="keywords" content="WiseAuto车用干燥剂,车灯干燥剂,汽车灯具防雾,车灯防潮,车灯控湿,汽车干燥剂,Wisepac" />
 
   <style>
     :root {
-      --primary: #0b67d1;
-      --primary-dark: #062f66;
-      --secondary: #14b8e8;
-      --ink: #101828;
-      --text: #475467;
-      --muted: #667085;
-      --line: #e4eaf2;
-      --bg: #f5f8fc;
-      --card: #ffffff;
-      --dark: #071527;
-      --light-blue: #eef7ff;
-      --shadow: 0 22px 60px rgba(15, 51, 92, 0.12);
-      --radius: 28px;
+      --wise-blue: #00a7d8;
+      --wise-blue-dark: #04799d;
+      --wise-navy: #102b3f;
+      --wise-deep: #071d2b;
+      --wise-text: #344756;
+      --wise-muted: #6b7b86;
+      --wise-light: #f5f9fb;
+      --wise-border: #dce8ee;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(16, 43, 63, .10);
+      --radius: 22px;
     }
 
     * {
@@ -31,17 +29,10 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-        "Microsoft YaHei", Arial, sans-serif;
-      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      color: var(--wise-text);
       background: #fff;
       line-height: 1.7;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
     }
 
     a {
@@ -49,218 +40,174 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .container {
-      width: min(1200px, calc(100% - 32px));
+      width: min(1200px, calc(100% - 40px));
       margin: 0 auto;
     }
 
-    /* =========================
-       Header
-    ========================= */
+    /* Header */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(228, 234, 242, 0.85);
+      background: rgba(255, 255, 255, .96);
+      border-bottom: 1px solid rgba(220, 232, 238, .9);
+      backdrop-filter: blur(12px);
     }
 
     .header-inner {
-      min-height: 78px;
+      height: 76px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 30px;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--primary-dark);
-      letter-spacing: -0.4px;
-      margin-right: auto;
-      flex-shrink: 0;
-    }
-
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: 18px;
-      font-weight: 900;
+    .logo img {
+      height: 44px;
+      width: auto;
     }
 
     .nav {
-      margin-left: auto;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
-      gap: 28px;
+      gap: 30px;
+      margin-left: auto;
       font-size: 15px;
-      color: #344054;
-      white-space: nowrap;
+      color: #1e3545;
     }
 
-    .nav a:hover {
-      color: var(--primary);
+    .nav a {
+      position: relative;
+      padding: 26px 0;
+      font-weight: 500;
+    }
+
+    .nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 18px;
+      width: 0;
+      height: 2px;
+      background: var(--wise-blue);
+      transition: .25s ease;
+    }
+
+    .nav a:hover::after,
+    .nav a.active::after {
+      width: 100%;
     }
 
     .header-cta {
-      flex-shrink: 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       height: 42px;
-      padding: 0 18px;
+      padding: 0 20px;
       border-radius: 999px;
+      background: var(--wise-blue);
       color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
       font-size: 14px;
-      font-weight: 700;
-      box-shadow: 0 12px 28px rgba(11, 103, 209, 0.22);
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(0, 167, 216, .22);
+      white-space: nowrap;
     }
 
-    /* =========================
-       Product Page
-    ========================= */
-    .wiseauto-page {
-      overflow: hidden;
-      background: var(--bg);
-    }
-
-    .section {
-      padding: 86px 0;
-    }
-
-    .section.white {
+    .mobile-menu {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid var(--wise-border);
       background: #fff;
+      color: var(--wise-navy);
+      font-size: 22px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 640px;
+      overflow: hidden;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(6, 27, 43, .94) 0%, rgba(6, 27, 43, .82) 44%, rgba(6, 27, 43, .28) 100%),
+        url("https://wisepac.com.cn/wp-content/uploads/2024/11/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5-%EF%BC%88%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82%EF%BC%89-2_03.jpg") center right / cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 120px;
+      background: linear-gradient(180deg, rgba(255,255,255,0), #fff);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      min-height: 640px;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+      gap: 40px;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 18px;
-      color: var(--primary);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      color: #dff8ff;
+      font-size: 14px;
+      letter-spacing: .04em;
+      margin-bottom: 22px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 34px;
-      height: 2px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-    }
-
-    .section-head {
-      max-width: 790px;
-      margin-bottom: 42px;
-    }
-
-    .section-head.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
-
-    .section-head.center .eyebrow {
-      justify-content: center;
-    }
-
-    .section-head.center .eyebrow::before {
-      display: none;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
-    .h2 {
-      margin-bottom: 16px;
-      font-size: clamp(30px, 4vw, 48px);
-      line-height: 1.18;
-      letter-spacing: -1.4px;
-      color: var(--ink);
-    }
-
-    .lead {
-      color: var(--text);
-      font-size: 17px;
-      line-height: 1.9;
-    }
-
-    .hero {
-      position: relative;
-      min-height: 720px;
-      padding: 88px 0 96px;
-      color: #fff;
-      background:
-        linear-gradient(90deg, rgba(7, 21, 39, 0.96) 0%, rgba(7, 21, 39, 0.84) 42%, rgba(7, 21, 39, 0.36) 100%),
-        url("https://wisepac.com.cn/wp-content/uploads/2024/11/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5-%EF%BC%88%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82%EF%BC%89-2_03.jpg") center / cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: auto -120px -180px auto;
-      width: 520px;
-      height: 520px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      border: 90px solid rgba(19, 183, 232, 0.12);
-      pointer-events: none;
+      background: var(--wise-blue);
+      box-shadow: 0 0 0 6px rgba(0,167,216,.16);
     }
 
-    .hero-grid {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
-      gap: 58px;
-      align-items: center;
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(38px, 5vw, 68px);
+      line-height: 1.12;
+      letter-spacing: -1.6px;
+      font-weight: 800;
     }
 
-    .hero .eyebrow {
-      color: #8fe7ff;
-    }
-
-    .hero .eyebrow::before {
-      background: #8fe7ff;
-    }
-
-    .hero-title {
-      margin-bottom: 24px;
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: 1.05;
-      letter-spacing: -2.4px;
+    .hero h1 span {
+      color: #7ee4ff;
     }
 
     .hero-desc {
-      max-width: 700px;
-      margin-bottom: 34px;
-      color: rgba(255, 255, 255, 0.84);
+      max-width: 680px;
+      margin: 26px 0 34px;
+      color: rgba(255,255,255,.82);
       font-size: 18px;
-      line-height: 1.95;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-bottom: 34px;
     }
 
     .btn {
@@ -271,407 +218,369 @@
       padding: 0 24px;
       border-radius: 999px;
       font-size: 15px;
-      font-weight: 800;
-      transition: 0.25s ease;
-      cursor: pointer;
-      border: 0;
+      font-weight: 700;
+      transition: .25s ease;
     }
 
     .btn-primary {
+      background: var(--wise-blue);
       color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      box-shadow: 0 16px 34px rgba(19, 183, 232, 0.24);
+      box-shadow: 0 14px 30px rgba(0,167,216,.25);
+    }
+
+    .btn-primary:hover {
+      background: #00b7ed;
+      transform: translateY(-2px);
     }
 
     .btn-light {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.28);
       color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
     }
 
-    .btn-white {
-      color: var(--primary-dark);
-      background: #fff;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn:hover {
+    .btn-light:hover {
+      background: rgba(255,255,255,.20);
       transform: translateY(-2px);
+    }
+
+    .hero-panel {
+      align-self: end;
+      margin-bottom: 75px;
+      padding: 26px;
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.94);
+      color: var(--wise-navy);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel h3 {
+      margin: 0 0 18px;
+      font-size: 20px;
     }
 
     .hero-points {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      max-width: 760px;
+      gap: 12px;
     }
 
     .hero-point {
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: 16px;
+      background: #f4f9fb;
+      border: 1px solid #e5f0f5;
     }
 
-    .hero-point strong {
+    .hero-point b {
       display: block;
-      margin-bottom: 5px;
-      color: #fff;
-      font-size: 16px;
+      color: var(--wise-navy);
+      line-height: 1.4;
     }
 
     .hero-point span {
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-    .hero-product {
-      position: relative;
-      padding: 18px;
-      border-radius: 34px;
-      background: rgba(255, 255, 255, 0.94);
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
-    }
-
-    .hero-product img {
-      width: 100%;
-      border-radius: 24px;
-    }
-
-    .floating-card {
-      position: absolute;
-      left: -28px;
-      bottom: 36px;
-      width: 230px;
-      padding: 18px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.96);
-      color: var(--ink);
-      box-shadow: var(--shadow);
-    }
-
-    .floating-card strong {
-      display: block;
-      color: var(--primary-dark);
-      font-size: 20px;
-    }
-
-    .floating-card span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .feature-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 225px;
-      padding: 30px 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: #fff;
-      box-shadow: 0 14px 34px rgba(15, 51, 92, 0.06);
-    }
-
-    .feature-card::after {
-      content: "";
-      position: absolute;
-      right: -50px;
-      top: -50px;
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: rgba(19, 183, 232, 0.1);
-    }
-
-    .feature-no {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 22px;
-      border-radius: 15px;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      font-weight: 900;
-    }
-
-    .feature-card h3 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      line-height: 1.35;
-    }
-
-    .feature-card p {
-      margin-bottom: 0;
-      color: var(--text);
+      color: var(--wise-muted);
       font-size: 14px;
-      line-height: 1.8;
     }
 
-    .split-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 44px;
-      align-items: center;
-    }
-
-    .image-box {
-      overflow: hidden;
-      border-radius: 32px;
-      background: #eef7fb;
-      box-shadow: var(--shadow);
-    }
-
-    .image-box img {
-      width: 100%;
-    }
-
-    .data-list {
-      display: grid;
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .data-item {
-      padding: 22px 24px;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      background: #f7fbff;
-    }
-
-    .data-item strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--primary-dark);
-      font-size: 20px;
-    }
-
-    .data-item p {
-      margin: 0;
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-
-    .mode-section {
-      color: #fff;
-      background:
-        radial-gradient(circle at 78% 20%, rgba(19, 183, 232, 0.22), transparent 32%),
-        linear-gradient(135deg, #071527 0%, #092f5d 55%, #071527 100%);
-    }
-
-    .mode-section .h2 {
-      color: #fff;
-    }
-
-    .mode-section .lead {
-      color: rgba(255, 255, 255, 0.76);
-    }
-
-    .mode-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .mode-card {
-      position: relative;
-      overflow: hidden;
-      padding: 38px;
-      min-height: 260px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.09);
-      backdrop-filter: blur(14px);
-    }
-
-    .mode-tag {
+    .check {
+      flex: 0 0 auto;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(0,167,216,.14);
+      color: var(--wise-blue);
       display: inline-flex;
-      margin-bottom: 16px;
-      color: #91e9ff;
-      font-size: 13px;
+      align-items: center;
+      justify-content: center;
       font-weight: 800;
-      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+
+    /* Common */
+    section {
+      padding: 86px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      color: var(--wise-blue-dark);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
-    .mode-card h3 {
-      margin-bottom: 14px;
-      font-size: 30px;
+    .section-kicker::before,
+    .section-kicker::after {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: var(--wise-blue);
+    }
+
+    .section-head h2 {
+      margin: 0 0 14px;
+      color: var(--wise-navy);
+      font-size: clamp(28px, 3vw, 42px);
       line-height: 1.25;
+      letter-spacing: -.8px;
     }
 
-    .mode-card p {
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.76);
-      font-size: 16px;
-      line-height: 1.85;
-    }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 22px;
-    }
-
-    .gallery-main,
-    .gallery-side {
-      display: grid;
-      gap: 22px;
-    }
-
-    .gallery-card {
-      overflow: hidden;
-      border-radius: 28px;
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: 0 14px 36px rgba(15, 51, 92, 0.08);
-    }
-
-    .gallery-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.35s ease;
-    }
-
-    .gallery-card:hover img {
-      transform: scale(1.03);
-    }
-
-    .gallery-main .gallery-card {
-      min-height: 560px;
-    }
-
-    .gallery-side .gallery-card {
-      min-height: 269px;
-    }
-
-    .spec-card {
-      padding: 18px;
-      border-radius: 34px;
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .spec-card img {
-      width: 100%;
-      border-radius: 24px;
-    }
-
-    .spec-notes {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-top: 18px;
-    }
-
-    .spec-note {
-      padding: 22px;
-      border-radius: 20px;
-      background: #f7fbff;
-      border: 1px solid var(--line);
-      color: var(--text);
-      font-size: 15px;
-    }
-
-    .spec-note strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--primary-dark);
+    .section-head p {
+      margin: 0;
+      color: var(--wise-muted);
       font-size: 17px;
     }
 
-    .table-panel {
+    /* Overview */
+    .overview {
       background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 32px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .overview-media {
+      position: relative;
+    }
+
+    .overview-media .main-img {
+      border-radius: 28px;
       box-shadow: var(--shadow);
+      border: 1px solid rgba(220,232,238,.9);
       overflow: hidden;
+      background: #f7fbfd;
+    }
+
+    .overview-media .main-img img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .overview-info {
+      position: absolute;
+      right: -18px;
+      bottom: -24px;
+      width: min(290px, 62%);
+      padding: 20px;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--wise-border);
+    }
+
+    .overview-info strong {
+      display: block;
+      color: var(--wise-blue-dark);
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .overview-info span {
+      color: var(--wise-muted);
+      font-size: 14px;
+    }
+
+    .overview-text h2 {
+      margin: 0 0 18px;
+      color: var(--wise-navy);
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.25;
+    }
+
+    .overview-text p {
+      margin: 0 0 20px;
+      color: var(--wise-text);
+      font-size: 17px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .tag-list span {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #ecf8fb;
+      color: var(--wise-blue-dark);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* Product Slider */
+    .product-gallery {
+      background: #f5f9fb;
+      padding: 82px 0;
+    }
+
+    .auto-gallery {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .slider-main {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      background: #f6fafc;
+      border: 1px solid var(--wise-border);
+      box-shadow: var(--shadow);
+      min-height: 560px;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.015);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: scale(1);
+      z-index: 2;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slider-dots {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      z-index: 4;
+      display: flex;
+      gap: 8px;
+    }
+
+    .slider-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255,255,255,.55);
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .slider-dot.active {
+      width: 26px;
+      background: var(--wise-blue);
+    }
+
+    /* Specs Table */
+    .specs {
+      background: #fff;
+      padding: 86px 0 72px;
+    }
+
+    .table-panel {
+      max-width: 1180px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 28px;
+      background: #fff;
+      border: 1px solid var(--wise-border);
+      box-shadow: 0 16px 46px rgba(16,43,63,.08);
     }
 
     .table-toolbar {
       display: grid;
-      grid-template-columns: 1fr auto auto;
+      grid-template-columns: 1fr 190px 190px;
       gap: 14px;
-      align-items: center;
-      padding: 22px;
-      background: linear-gradient(180deg, #ffffff, #f7fbff);
-      border-bottom: 1px solid var(--line);
+      padding: 20px;
+      background: linear-gradient(180deg, #ffffff, #f7fbfd);
+      border-bottom: 1px solid var(--wise-border);
     }
 
     .search-input,
     .filter-select {
       width: 100%;
       height: 46px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 0 18px;
-      color: var(--ink);
+      border: 1px solid var(--wise-border);
+      border-radius: 14px;
       background: #fff;
-      outline: none;
+      color: var(--wise-text);
       font-size: 14px;
+      outline: none;
+      padding: 0 14px;
       font-family: inherit;
     }
 
     .search-input:focus,
     .filter-select:focus {
-      border-color: rgba(11, 103, 209, 0.45);
-      box-shadow: 0 0 0 4px rgba(11, 103, 209, 0.08);
+      border-color: var(--wise-blue);
+      box-shadow: 0 0 0 4px rgba(0,167,216,.10);
     }
 
     .table-scroll {
-      width: 100%;
       overflow-x: auto;
     }
 
     .product-table {
       width: 100%;
-      min-width: 980px;
+      min-width: 1080px;
       border-collapse: collapse;
-      background: #fff;
-    }
-
-    .product-table th,
-    .product-table td {
-      padding: 18px 16px;
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      vertical-align: middle;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .product-table th {
-      color: #344054;
-      background: #f2f7fc;
-      font-weight: 800;
+      background: var(--wise-navy);
+      color: #fff;
+      text-align: left;
+      padding: 16px 18px;
+      font-weight: 700;
       white-space: nowrap;
     }
 
     .product-table td {
-      color: var(--text);
+      padding: 15px 18px;
+      border-bottom: 1px solid #edf3f6;
+      color: var(--wise-text);
+      vertical-align: middle;
+    }
+
+    .product-table tbody tr:hover {
+      background: #f8fcfd;
+    }
+
+    .product-table tbody tr.is-hidden {
+      display: none;
     }
 
     .table-thumb {
-      width: 72px;
-      height: 54px;
-      border-radius: 12px;
+      width: 74px;
+      height: 56px;
+      border-radius: 14px;
       overflow: hidden;
-      background: #f3f7fb;
-      border: 1px solid var(--line);
+      background: #f4f9fb;
+      border: 1px solid #e5f0f5;
     }
 
     .table-thumb img {
@@ -684,321 +593,410 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 28px;
-      padding: 0 10px;
+      padding: 5px 10px;
       border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 700;
       white-space: nowrap;
     }
 
     .tag-blue {
-      color: var(--primary-dark);
-      background: #eaf4ff;
+      background: #e7f7fc;
+      color: var(--wise-blue-dark);
     }
 
     .tag-cyan {
-      color: #086b83;
-      background: #e8fbff;
+      background: #e1fbff;
+      color: #007c9f;
     }
 
     .tag-gray {
-      color: #475467;
-      background: #f2f4f7;
+      background: #f0f4f6;
+      color: #60717c;
     }
 
     .table-action {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 36px;
+      height: 34px;
       padding: 0 14px;
       border-radius: 999px;
-      background: var(--primary);
+      background: var(--wise-blue);
       color: #fff;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
       white-space: nowrap;
     }
 
-    .info-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 14px 34px rgba(15, 51, 92, 0.06);
-    }
-
-    .info-table th,
-    .info-table td {
-      padding: 18px 20px;
-      border-bottom: 1px solid var(--line);
-      font-size: 15px;
-      text-align: left;
-      vertical-align: top;
-    }
-
-    .info-table th {
-      width: 230px;
-      color: var(--primary-dark);
-      background: #f5faff;
-      font-weight: 800;
-    }
-
-    .info-table td {
-      color: var(--text);
-      background: #fff;
-    }
-
-    .info-table tr:last-child th,
-    .info-table tr:last-child td {
-      border-bottom: 0;
+    .table-action:hover {
+      background: #00b7ed;
     }
 
     .table-note {
-      padding: 16px 22px;
-      color: var(--muted);
-      background: #fbfdff;
-      font-size: 13px;
-      line-height: 1.8;
-      border-top: 1px solid var(--line);
+      padding: 16px 20px 20px;
+      color: var(--wise-muted);
+      font-size: 14px;
+      background: #fff;
     }
 
-    .resource-grid {
+    /* Features */
+    .features {
+      background: linear-gradient(180deg, #f5f9fb 0%, #fff 100%);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      padding: 28px 24px;
+      border-radius: 24px;
+      background: #fff;
+      border: 1px solid var(--wise-border);
+      box-shadow: 0 12px 36px rgba(16,43,63,.06);
+      transition: .25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e2f8ff, #f4fbfd);
+      color: var(--wise-blue-dark);
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 10px;
+      color: var(--wise-navy);
+      font-size: 20px;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: var(--wise-muted);
+      font-size: 15px;
+    }
+
+    /* Applications */
+    .applications {
+      background:
+        linear-gradient(rgba(7, 34, 52, .93), rgba(7, 34, 52, .93)),
+        url("https://wisepac.com.cn/wp-content/uploads/2024/11/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5-%EF%BC%88%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82%EF%BC%89-2_03.jpg") center / cover fixed no-repeat;
+      color: #fff;
+    }
+
+    .applications .section-head h2,
+    .applications .section-head p {
+      color: #fff;
+    }
+
+    .applications .section-head p {
+      color: rgba(255,255,255,.76);
+    }
+
+    .app-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 24px;
     }
 
-    .resource-card {
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 28px;
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      background: #fff;
-      box-shadow: 0 14px 36px rgba(15, 51, 92, 0.07);
-      transition: 0.25s ease;
+    .app-card {
+      padding: 30px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(10px);
     }
 
-    .resource-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(11, 103, 209, 0.35);
-      box-shadow: 0 22px 48px rgba(15, 51, 92, 0.12);
+    .app-card span {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      background: var(--wise-blue);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
-    .resource-card h3 {
-      margin-bottom: 10px;
+    .app-card h3 {
+      margin: 0 0 10px;
+      color: #fff;
       font-size: 22px;
     }
 
-    .resource-card p {
-      margin-bottom: 24px;
-      color: var(--text);
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .resource-card span {
-      color: var(--primary);
-      font-size: 15px;
-      font-weight: 800;
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .faq-item {
-      padding: 26px;
-      border-radius: 24px;
-      background: #fff;
-      border: 1px solid var(--line);
-      box-shadow: 0 12px 30px rgba(15, 51, 92, 0.06);
-    }
-
-    .faq-item h3 {
-      margin-bottom: 10px;
-      font-size: 19px;
-      color: var(--ink);
-    }
-
-    .faq-item p {
+    .app-card p {
       margin: 0;
-      color: var(--text);
+      color: rgba(255,255,255,.74);
       font-size: 15px;
-      line-height: 1.8;
     }
 
-    .cta-section {
-      padding: 76px 0;
-      color: #fff;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+    /* CTA */
+    .cta {
+      padding: 80px 0;
+      background: #f5f9fb;
     }
 
     .cta-box {
+      position: relative;
+      overflow: hidden;
+      padding: 48px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(0,167,216,.25), transparent 32%),
+        linear-gradient(135deg, #0b2638, #12465a);
+      color: #fff;
       display: grid;
       grid-template-columns: 1fr auto;
+      gap: 30px;
       align-items: center;
-      gap: 36px;
+      box-shadow: var(--shadow);
     }
 
     .cta-box h2 {
-      margin-bottom: 12px;
-      font-size: clamp(30px, 4vw, 46px);
-      line-height: 1.2;
-      letter-spacing: -1.2px;
+      margin: 0 0 12px;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.25;
     }
 
     .cta-box p {
       margin: 0;
+      color: rgba(255,255,255,.74);
       max-width: 760px;
-      color: rgba(255, 255, 255, 0.84);
-      font-size: 17px;
     }
 
+    .cta-contact {
+      display: grid;
+      gap: 12px;
+      min-width: 230px;
+    }
+
+    .cta-contact a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--wise-navy);
+      font-weight: 800;
+    }
+
+    .cta-contact span {
+      color: rgba(255,255,255,.78);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* Footer */
     .site-footer {
-      background: #071527;
-      color: rgba(255, 255, 255, 0.74);
-      padding: 58px 0 28px;
+      background: var(--wise-deep);
+      color: rgba(255,255,255,.76);
+      padding: 64px 0 28px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 38px;
-      margin-bottom: 38px;
+      grid-template-columns: 1.2fr .8fr .8fr 1fr;
+      gap: 36px;
+      margin-bottom: 42px;
     }
 
-    .footer-title {
-      margin-bottom: 16px;
+    .footer-logo img {
+      height: 42px;
+      width: auto;
+      margin-bottom: 18px;
+    }
+
+    .footer-col h3 {
+      margin: 0 0 16px;
       color: #fff;
       font-size: 18px;
-      font-weight: 800;
     }
 
-    .footer-text,
-    .footer-links a {
-      color: rgba(255, 255, 255, 0.72);
+    .footer-col p,
+    .footer-col li {
+      margin: 0 0 10px;
+      color: rgba(255,255,255,.68);
       font-size: 14px;
-      line-height: 1.9;
     }
 
-    .footer-links {
-      display: grid;
-      gap: 8px;
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .footer-links a:hover {
-      color: #fff;
+    .footer-col a:hover {
+      color: #7ee4ff;
     }
 
-    .copyright {
+    .footer-bottom {
       padding-top: 24px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255,255,255,.10);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255,255,255,.52);
       font-size: 13px;
-      color: rgba(255, 255, 255, 0.55);
     }
 
-    @media (max-width: 1080px) {
-      .hero-grid,
-      .split-grid,
-      .gallery-grid,
-      .cta-box {
-        grid-template-columns: 1fr;
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .header-cta {
+        display: none;
       }
 
-      .feature-grid,
-      .faq-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-main .gallery-card,
-      .gallery-side .gallery-card {
-        min-height: auto;
-      }
-
-      .floating-card {
-        left: 28px;
-      }
-    }
-
-    @media (max-width: 820px) {
-      .header-inner {
-        min-height: auto;
-        padding: 16px 0;
-        align-items: center;
-      }
-
-      .logo {
-        font-size: 18px;
+      .mobile-menu {
+        display: flex;
       }
 
       .nav {
         display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 14px 20px 20px;
+        background: #fff;
+        border-bottom: 1px solid var(--wise-border);
+        box-shadow: 0 20px 35px rgba(16,43,63,.08);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
       }
 
-      .header-cta {
-        height: 38px;
-        padding: 0 14px;
-        font-size: 13px;
+      .nav.open {
+        display: flex;
       }
 
-      .hero {
-        min-height: auto;
-        padding: 66px 0 72px;
+      .nav a {
+        width: 100%;
+        padding: 14px 0;
+        border-bottom: 1px solid #edf3f6;
       }
 
-      .hero-title {
-        font-size: 42px;
+      .nav a::after {
+        display: none;
       }
 
-      .hero-points,
-      .feature-grid,
-      .mode-grid,
-      .spec-notes,
-      .resource-grid,
-      .footer-grid,
-      .faq-grid {
+      .hero-inner,
+      .overview-grid,
+      .cta-box {
         grid-template-columns: 1fr;
       }
 
-      .section {
-        padding: 62px 0;
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(6, 27, 43, .96), rgba(6, 27, 43, .72)),
+          url("https://wisepac.com.cn/wp-content/uploads/2024/11/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5-%EF%BC%88%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82%EF%BC%89-2_03.jpg") center / cover no-repeat;
       }
 
-      .hero-actions {
-        flex-direction: column;
+      .hero-panel {
+        align-self: auto;
+        margin: 0 0 70px;
       }
 
-      .btn {
-        width: 100%;
-      }
-
-      .floating-card {
-        position: static;
-        width: 100%;
-        margin-top: 14px;
+      .feature-grid,
+      .app-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .table-toolbar {
         grid-template-columns: 1fr;
       }
 
-      .info-table th,
-      .info-table td {
-        display: block;
-        width: 100%;
+      .auto-gallery {
+        max-width: 100%;
       }
 
-      .info-table th {
-        border-bottom: 0;
+      .slider-main {
+        min-height: 480px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: min(100% - 28px, 1200px);
+      }
+
+      .header-inner {
+        height: 68px;
+      }
+
+      .logo img {
+        height: 38px;
+      }
+
+      .nav {
+        top: 68px;
+      }
+
+      .hero,
+      .hero-inner {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 80px 0 60px;
+      }
+
+      .hero-panel {
+        margin-bottom: 20px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .feature-grid,
+      .app-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .overview-info {
+        position: static;
+        width: 100%;
+        margin-top: 16px;
+      }
+
+      .product-table {
+        min-width: 1080px;
+      }
+
+      .product-gallery {
+        padding: 64px 0;
+      }
+
+      .slider-main {
+        min-height: 420px;
+      }
+
+      .cta-box {
+        padding: 34px 24px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
       }
     }
   </style>
@@ -1006,606 +1004,550 @@
 
 <body>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="/">
-        <span class="logo-mark">W</span>
-        <span>Wisepac 威胜科技</span>
-      </a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="https://wisepac.com.cn/" aria-label="Wisepac 威胜科技">
+      <img src="https://wisepac.com.cn/wp-content/uploads/2024/10/wisepac.png" alt="Wisepac 威胜科技">
+    </a>
 
-      <nav class="nav">
-        <a href="/product/">产品中心</a>
-        <a href="/resources/">资源与应用</a>
-        <a href="/about-us/">关于我们</a>
-        <a href="/contact-us/">联系我们</a>
-      </nav>
+    <nav class="nav" id="mainNav" aria-label="主导航">
+      <a href="https://wisepac.com.cn/products/">产品中心</a>
+      <a href="https://wisepac.com.cn/case-studies/" class="active">解决方案</a>
+      <a href="https://wisepac.com.cn/case-studies/">资源与应用</a>
+      <a href="https://wisepac.com.cn/about-us/">关于我们</a>
+      <a href="https://wisepac.com.cn/contact-us/">联系我们</a>
+    </nav>
 
-      <a class="header-cta" href="/contact-us/">联系专家团队</a>
+    <a class="header-cta" href="https://wisepac.com.cn/contact-us/">获取报价</a>
+    <button class="mobile-menu" id="menuBtn" aria-label="移动端菜单">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">WiseAuto Automotive Moisture Control</div>
+        <h1>WiseAuto<br><span>车用干燥剂</span></h1>
+        <p class="hero-desc">
+          WiseAuto 车用干燥剂专为解决因温差导致的车灯起雾和凝露问题而设计，适用于汽车前照灯、尾灯、信号灯等灯具内部防潮场景。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wisepac.com.cn/contact-us/">获取报价</a>
+          <a class="btn btn-light" href="#specs">查看产品规格</a>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <h3>适用于汽车灯具防潮应用</h3>
+        <div class="hero-points">
+          <div class="hero-point">
+            <i class="check">✓</i>
+            <div>
+              <b>降低车灯内部湿度</b>
+              <span>有助于减少车灯起雾、凝露对外观和使用体验的影响。</span>
+            </div>
+          </div>
+          <div class="hero-point">
+            <i class="check">✓</i>
+            <div>
+              <b>快吸与慢吸可选</b>
+              <span>可根据不同灯具结构和防潮周期选择合适方案。</span>
+            </div>
+          </div>
+          <div class="hero-point">
+            <i class="check">✓</i>
+            <div>
+              <b>多规格适配</b>
+              <span>宽版、窄版等规格，适配不同安装空间。</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main class="wiseauto-page">
-
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <div class="eyebrow">WiseAuto Automotive Desiccant</div>
-            <h1 class="hero-title">WiseAuto<br>车用干燥剂</h1>
-            <p class="hero-desc">
-              WiseAuto 车用干燥剂专为解决因温差导致的车灯起雾和凝露问题而设计。产品可用于降低车灯内部湿度，并可根据需求选择快速吸湿模式或慢速吸湿模式，适配不同车灯防潮应用。
-            </p>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="/contact-us/">获取报价</a>
-              <a class="btn btn-light" href="https://wisepac.com.cn/wp-content/uploads/2024/11/WiseAuto-%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82.pdf" target="_blank" rel="noopener">下载产品单页</a>
-              <a class="btn btn-light" href="#wiseauto-table">查看规格表</a>
-            </div>
-
-            <div class="hero-points">
-              <div class="hero-point">
-                <strong>车灯防潮</strong>
-                <span>面向车灯起雾、凝露及内部湿度控制需求。</span>
-              </div>
-              <div class="hero-point">
-                <strong>吸湿模式可选</strong>
-                <span>可选择快速吸湿或慢速吸湿方案。</span>
-              </div>
-              <div class="hero-point">
-                <strong>吸湿后固化</strong>
-                <span>吸湿后固化成型，降低渗漏风险。</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-product">
-            <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%821.webp" alt="WiseAuto 车用干燥剂用于车灯防潮">
-            <div class="floating-card">
-              <strong>车灯防潮方案</strong>
-              <span>适用于汽车车灯内部湿度控制与凝露问题改善。</span>
-            </div>
-          </div>
+  <section class="overview">
+    <div class="container overview-grid">
+      <div class="overview-media">
+        <div class="main-img">
+          <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%821.webp" alt="WiseAuto 车用干燥剂产品展示">
+        </div>
+        <div class="overview-info">
+          <strong>车灯控湿方案</strong>
+          <span>围绕车灯起雾、凝露和内部湿度控制需求，提供适配性的干燥剂应用方案。</span>
         </div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">Product Advantages</div>
-          <h2 class="h2">围绕车灯凝露问题设计的专用吸湿产品</h2>
-          <p class="lead">
-            WiseAuto 车用干燥剂重点服务于汽车车灯内部湿度控制，帮助减少温差、湿气积聚等因素带来的起雾和凝露问题。
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-no">01</div>
-            <h3>降低车灯内部湿度</h3>
-            <p>用于车灯内部防潮场景，帮助改善湿气积聚造成的起雾与凝露问题。</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-no">02</div>
-            <h3>快速 / 慢速吸湿可选</h3>
-            <p>可根据实际应用需求选择吸湿模式，兼顾即时保护与长期稳定。</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-no">03</div>
-            <h3>适应高温高湿环境</h3>
-            <p>适用于高温高湿等相对严苛的车灯使用环境，保持稳定吸湿表现。</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-no">04</div>
-            <h3>吸湿后固化成型</h3>
-            <p>吸湿后固化成型，可降低液体渗漏风险，提升车灯内部使用安全性。</p>
-          </div>
+      <div class="overview-text">
+        <div class="section-kicker">Product Overview</div>
+        <h2>专为车灯起雾与凝露问题设计</h2>
+        <p>
+          WiseAuto 车用干燥剂面向汽车灯具内部湿度控制场景，可用于降低因温差变化、密闭空间湿气积聚等因素带来的起雾和凝露风险。
+        </p>
+        <p>
+          产品设计兼具灵活性，可根据需求选择快速吸湿模式以提供即时保护，或采用慢速吸湿模式以实现长期稳定控湿。吸湿后可固化成型，有助于减少渗漏风险。
+        </p>
+        <div class="tag-list">
+          <span>车灯防雾</span>
+          <span>内部控湿</span>
+          <span>防凝露</span>
+          <span>快吸 / 慢吸可选</span>
+          <span>规格可定制</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section white">
-      <div class="container">
-        <div class="split-grid">
-          <div class="image-box">
-            <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5-%EF%BC%88%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82%EF%BC%89-2_07.jpg" alt="WiseAuto 车用干燥剂产品原料与吸湿速度">
-          </div>
-
-          <div>
-            <div class="eyebrow">Material & Performance</div>
-            <h2 class="h2">吸湿前后状态清晰，便于产品选型</h2>
-            <p class="lead">
-              页面展示了车用高性能干燥剂的吸湿前后状态，以及慢吸款和快吸款在指定条件下的吸湿速度，方便根据车灯结构、内部空间和防潮周期进行选择。
-            </p>
-
-            <div class="data-list">
-              <div class="data-item">
-                <strong>吸湿率 ≥ 200%</strong>
-                <p>产品原料展示图中标注车用高性能干燥剂吸湿率信息。</p>
-              </div>
-
-              <div class="data-item">
-                <strong>25℃ / RH90% / 48小时</strong>
-                <p>页面展示了在该参考条件下的吸湿速度信息。</p>
-              </div>
-
-              <div class="data-item">
-                <strong>慢吸款与快吸款</strong>
-                <p>慢吸款每克可吸湿 0.01～0.04g，快吸款每克可吸湿 0.01～0.15g。</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section mode-section">
-      <div class="container">
-        <div class="section-head">
-          <div class="eyebrow">Moisture Absorption Modes</div>
-          <h2 class="h2">两种吸湿模式，适配不同车灯防潮需求</h2>
-          <p class="lead">
-            根据车灯内部空间、安装方式、湿度变化和防潮周期，可选择快速吸湿模式或慢速吸湿模式。
-          </p>
-        </div>
-
-        <div class="mode-grid">
-          <div class="mode-card">
-            <span class="mode-tag">Fast-Acting</span>
-            <h3>快速吸湿模式</h3>
-            <p>
-              适合需要较快降低车灯内部湿度的场景，为车灯内部环境提供及时防潮保护。
-            </p>
-          </div>
-
-          <div class="mode-card">
-            <span class="mode-tag">Long-Lasting</span>
-            <h3>慢速吸湿模式</h3>
-            <p>
-              适合需要更长周期湿度控制的应用场景，强调持续、稳定的吸湿表现。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">Product Display</div>
-          <h2 class="h2">产品形态与安装应用展示</h2>
-          <p class="lead">
-            通过产品形态、规格组合和车灯安装场景展示，帮助客户更直观了解 WiseAuto 车用干燥剂的使用方式。
-          </p>
-        </div>
-
-        <div class="gallery-grid">
-          <div class="gallery-main">
-            <div class="gallery-card">
-              <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 车用干燥剂多规格产品展示">
-            </div>
-          </div>
-
-          <div class="gallery-side">
-            <div class="gallery-card">
-              <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%822.webp" alt="WiseAuto 车用干燥剂吸湿前后状态">
-            </div>
-
-            <div class="gallery-card">
-              <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 车用干燥剂车灯安装应用">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section white">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">Specifications</div>
-          <h2 class="h2">多种规格，适配不同车灯空间</h2>
-          <p class="lead">
-            页面展示了宽版与窄版两类规格，并说明可增加指定型号背胶，防止使用过程中脱落。
-          </p>
-        </div>
-
-        <div class="spec-card">
-          <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1-%E4%BA%A7%E5%93%81%E8%AF%A6%E6%83%85%E9%A1%B5-%EF%BC%88%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82%EF%BC%89-2_08.jpg" alt="WiseAuto 车用干燥剂产品规格">
-
-          <div class="spec-notes">
-            <div class="spec-note">
-              <strong>宽版规格</strong>
-              20g、15g、10g、5g、3g、2g、1g 等规格展示。
-            </div>
-
-            <div class="spec-note">
-              <strong>窄版规格</strong>
-              1.5g、1g、0.5g 等条形规格展示。
-            </div>
-
-            <div class="spec-note">
-              <strong>背胶选项</strong>
-              可增加指定型号背胶，防止使用过程中脱落。
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="wiseauto-table">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">Product Table</div>
-          <h2 class="h2">WiseAuto 车用干燥剂规格表</h2>
-          <p class="lead">
-            将中文页面中的规格信息整理成可筛选的产品表，方便客户快速查找适合的克重、尺寸与形态。
-          </p>
-        </div>
-
-        <div class="table-panel">
-          <div class="table-toolbar">
-            <input class="search-input" id="tableSearch" type="search" placeholder="搜索规格，例如：20g、宽版、1×12cm、快吸款" />
-
-            <select class="filter-select" id="typeFilter">
-              <option value="all">全部形态</option>
-              <option value="宽版">宽版</option>
-              <option value="窄版">窄版</option>
-            </select>
-
-            <select class="filter-select" id="modeFilter">
-              <option value="all">全部吸湿模式</option>
-              <option value="快吸款">快吸款</option>
-              <option value="慢吸款">慢吸款</option>
-              <option value="按需选择">按需选择</option>
-            </select>
-          </div>
-
-          <div class="table-scroll">
-            <table class="product-table">
-              <thead>
-                <tr>
-                  <th>产品图片</th>
-                  <th>系列</th>
-                  <th>形态</th>
-                  <th>克重</th>
-                  <th>尺寸</th>
-                  <th>吸湿模式</th>
-                  <th>背胶选项</th>
-                  <th>适用说明</th>
-                  <th>咨询</th>
-                </tr>
-              </thead>
-
-              <tbody id="productTableBody">
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 20g 车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>20g</strong></td>
-                  <td>10×10cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合较大内部空间或较高吸湿需求的车灯防潮应用。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 15g 车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>15g</strong></td>
-                  <td>9×10cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合中大型车灯内部湿度控制应用。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 10g 车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>10g</strong></td>
-                  <td>6.5×10cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合常规车灯内部防潮与凝露控制。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 5g 车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>5g</strong></td>
-                  <td>6.5×7cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合中小空间车灯内部吸湿应用。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 3g 车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>3g</strong></td>
-                  <td>5×7cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合空间有限的车灯防潮应用。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 2g 车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>2g</strong></td>
-                  <td>3×7cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合小型结构或局部湿度控制需求。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="宽版" data-mode="按需选择">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 1g 宽版车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>宽版</td>
-                  <td><strong>1g</strong></td>
-                  <td>3×6cm</td>
-                  <td><span class="tag tag-gray">按需选择</span></td>
-                  <td>可选</td>
-                  <td>适合小型车灯或紧凑空间防潮应用。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="窄版" data-mode="快吸款">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 1.5g 窄版车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>窄版</td>
-                  <td><strong>1.5g</strong></td>
-                  <td>1×12cm</td>
-                  <td><span class="tag tag-cyan">快吸款</span></td>
-                  <td>按需确认</td>
-                  <td>适合狭长空间或插入式安装场景。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="窄版" data-mode="快吸款">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 1g 窄版车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>窄版</td>
-                  <td><strong>1g</strong></td>
-                  <td>1×8cm</td>
-                  <td><span class="tag tag-cyan">快吸款</span></td>
-                  <td>按需确认</td>
-                  <td>适合空间较小的插入式防潮应用。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-
-                <tr data-type="窄版" data-mode="快吸款">
-                  <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 0.5g 窄版车用干燥剂"></div></td>
-                  <td><span class="tag tag-blue">WiseAuto</span></td>
-                  <td>窄版</td>
-                  <td><strong>0.5g</strong></td>
-                  <td>1×5cm</td>
-                  <td><span class="tag tag-cyan">快吸款</span></td>
-                  <td>按需确认</td>
-                  <td>适合小空间、局部防潮和定制化安装需求。</td>
-                  <td><a class="table-action" href="/contact-us/">获取报价</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="table-note">
-            注：以上规格依据页面展示内容整理。产品代码、包装数量、项目批量价格、背胶型号等信息可按客户项目需求进一步确认。
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section white">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">Product Information</div>
-          <h2 class="h2">产品信息总览</h2>
-          <p class="lead">
-            将客户关心的材料状态、吸湿速度、应用场景和选型重点集中展示，便于采购、研发和工程人员快速理解。
-          </p>
-        </div>
-
-        <table class="info-table">
-          <tr>
-            <th>产品名称</th>
-            <td>WiseAuto 车用干燥剂</td>
-          </tr>
-          <tr>
-            <th>主要应用</th>
-            <td>汽车车灯内部防潮、降低湿度、减少起雾与凝露问题。</td>
-          </tr>
-          <tr>
-            <th>产品形态</th>
-            <td>宽版袋装、窄版条形袋装，可根据车灯结构和安装位置选择。</td>
-          </tr>
-          <tr>
-            <th>吸湿模式</th>
-            <td>快速吸湿模式、慢速吸湿模式，可根据即时保护或长期稳定需求选择。</td>
-          </tr>
-          <tr>
-            <th>参考吸湿信息</th>
-            <td>页面显示吸湿率 ≥ 200%；在 25℃、RH90%、48小时参考条件下，慢吸款每克可吸湿 0.01～0.04g，快吸款每克可吸湿 0.01～0.15g。</td>
-          </tr>
-          <tr>
-            <th>安装支持</th>
-            <td>可增加指定型号背胶，防止使用过程中脱落；具体背胶型号和安装方式按项目确认。</td>
-          </tr>
-          <tr>
-            <th>选型建议</th>
-            <td>根据车灯内部空间、湿度水平、使用周期、安装位置和吸湿速度要求综合选择。</td>
-          </tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="section" id="technical-docs">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">Resources</div>
-          <h2 class="h2">产品资料与应用支持</h2>
-          <p class="lead">
-            保留原产品页中的产品单页、技术文档和应用案例入口，便于客户继续了解产品资料、选型信息和实际应用。
-          </p>
-        </div>
-
-        <div class="resource-grid">
-          <a class="resource-card" href="https://wisepac.com.cn/wp-content/uploads/2024/11/WiseAuto-%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%82.pdf" target="_blank" rel="noopener">
-            <div>
-              <h3>产品单页</h3>
-              <p>查看 WiseAuto 车用干燥剂产品资料，了解产品形态、规格与应用说明。</p>
-            </div>
-            <span>查看资料 →</span>
-          </a>
-
-          <a class="resource-card" href="#technical-docs">
-            <div>
-              <h3>技术文档</h3>
-              <p>用于承接技术参数、测试条件、使用建议及产品选型相关内容。</p>
-            </div>
-            <span>查看技术信息 →</span>
-          </a>
-
-          <a class="resource-card" href="#application-cases">
-            <div>
-              <h3>应用案例</h3>
-              <p>用于展示车灯防潮、凝露控制及汽车零部件相关应用场景。</p>
-            </div>
-            <span>查看应用案例 →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section white">
-      <div class="container">
-        <div class="section-head center">
-          <div class="eyebrow">FAQ</div>
-          <h2 class="h2">常见问题</h2>
-          <p class="lead">
-            面向车灯干燥剂选型、安装和应用咨询，补充客户常见关注点。
-          </p>
-        </div>
-
-        <div class="faq-grid">
-          <div class="faq-item">
-            <h3>WiseAuto 车用干燥剂主要解决什么问题？</h3>
-            <p>主要用于车灯内部湿度控制，帮助减少因温差和湿气积聚导致的车灯起雾、凝露问题。</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>快速吸湿和慢速吸湿如何选择？</h3>
-            <p>快速吸湿适合需要较快降低湿度的场景；慢速吸湿适合需要更长周期稳定防潮的场景，具体需结合车灯结构和项目要求确认。</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>是否可以增加背胶？</h3>
-            <p>页面规格图中说明可增加指定型号背胶，用于降低使用过程中脱落风险，具体背胶型号需按项目确认。</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>规格如何选择？</h3>
-            <p>可根据车灯内部空间、安装位置、预期防潮周期和吸湿速度要求选择宽版或窄版，以及不同克重规格。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section" id="application-cases">
-      <div class="container">
-        <div class="cta-box">
-          <div>
-            <h2>寻求帮助或需要报价？</h2>
-            <p>
-              如需根据车灯结构、安装空间、吸湿速度或规格要求进行选型，可联系专家团队获取支持。
-            </p>
-          </div>
-
-          <a class="btn btn-white" href="/contact-us/">联系专家团队</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
+  <section class="product-gallery" id="product-gallery">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-title">昆山威胜干燥剂有限公司</div>
-          <div class="footer-text">
-            中国 江苏省 昆山市 淀山湖镇 淀兴路97号<br>
-            专注工业防潮产品、吸湿包装材料及湿度指示配件。
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-title">联系方式</div>
-          <div class="footer-text">
-            邮箱：info@wisepac.com<br>
-            电话：+86 400-002-1517
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-title">快速链接</div>
-          <div class="footer-links">
-            <a href="/product/">产品中心</a>
-            <a href="/resources/">资源与应用</a>
-            <a href="/about-us/">关于我们</a>
-            <a href="/contact-us/">联系我们</a>
-          </div>
-        </div>
+      <div class="section-head">
+        <div class="section-kicker">Product Images</div>
+        <h2>产品图展示</h2>
+        <p>产品图自动切换展示，帮助用户快速了解 WiseAuto 车用干燥剂的产品形态、吸湿状态与车灯应用场景。</p>
       </div>
 
-      <div class="copyright">
-        Copyright © 2026 昆山威胜干燥剂有限公司 版权所有
+      <div class="auto-gallery" id="autoGallery">
+        <div class="slider-main">
+          <div class="slider-dots" id="sliderDots"></div>
+
+          <div class="slide active">
+            <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%821.webp" alt="WiseAuto 车用干燥剂车灯应用展示">
+          </div>
+
+          <div class="slide">
+            <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%822.webp" alt="WiseAuto 车用干燥剂吸湿材料展示">
+          </div>
+
+          <div class="slide">
+            <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 车用干燥剂宽版产品展示">
+          </div>
+
+          <div class="slide">
+            <img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 车用干燥剂窄版产品展示">
+          </div>
+        </div>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    const tableSearch = document.getElementById("tableSearch");
-    const typeFilter = document.getElementById("typeFilter");
-    const modeFilter = document.getElementById("modeFilter");
-    const rows = Array.from(document.querySelectorAll("#productTableBody tr"));
+  <section class="specs" id="specs">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Specifications</div>
+        <h2>产品规格</h2>
+        <p>WiseAuto 车用干燥剂提供宽版与窄版规格，可根据车灯结构、安装空间及控湿需求进行选择。</p>
+      </div>
 
-    function filterTable() {
-      const keyword = tableSearch.value.trim().toLowerCase();
-      const typeValue = typeFilter.value;
-      const modeValue = modeFilter.value;
+      <div class="table-panel">
+        <div class="table-toolbar">
+          <input class="search-input" id="tableSearch" type="search" placeholder="搜索规格，例如：20g、宽版、1×12cm、快吸款">
 
-      rows.forEach((row) => {
-        const rowText = row.innerText.toLowerCase();
-        const rowType = row.getAttribute("data-type");
-        const rowMode = row.getAttribute("data-mode");
+          <select class="filter-select" id="typeFilter">
+            <option value="all">全部形态</option>
+            <option value="宽版">宽版</option>
+            <option value="窄版">窄版</option>
+          </select>
 
-        const matchKeyword = !keyword || rowText.includes(keyword);
-        const matchType = typeValue === "all" || rowType === typeValue;
-        const matchMode = modeValue === "all" || rowMode === modeValue;
+          <select class="filter-select" id="modeFilter">
+            <option value="all">全部吸湿模式</option>
+            <option value="快吸款">快吸款</option>
+            <option value="慢吸款">慢吸款</option>
+            <option value="按需选择">按需选择</option>
+          </select>
+        </div>
 
-        row.style.display = matchKeyword && matchType && matchMode ? "" : "none";
-      });
-    }
+        <div class="table-scroll">
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>产品图片</th>
+                <th>系列</th>
+                <th>形态</th>
+                <th>克重</th>
+                <th>尺寸</th>
+                <th>吸湿模式</th>
+                <th>背胶选项</th>
+                <th>适用说明</th>
+                <th>咨询</th>
+              </tr>
+            </thead>
 
+            <tbody id="productTableBody">
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 20g 车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>20g</strong></td>
+                <td>10×10cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合较大内部空间或较高吸湿需求的车灯防潮应用。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 15g 车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>15g</strong></td>
+                <td>9×10cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合中大型车灯内部湿度控制应用。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 10g 车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>10g</strong></td>
+                <td>6.5×10cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合常规车灯内部防潮与凝露控制。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 5g 车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>5g</strong></td>
+                <td>6.5×7cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合中小空间车灯内部吸湿应用。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 3g 车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>3g</strong></td>
+                <td>5×7cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合空间有限的车灯防潮应用。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 2g 车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>2g</strong></td>
+                <td>3×7cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合小型结构或局部湿度控制需求。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="宽版" data-mode="按需选择">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%823.webp" alt="WiseAuto 1g 宽版车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>宽版</td>
+                <td><strong>1g</strong></td>
+                <td>3×6cm</td>
+                <td><span class="tag tag-gray">按需选择</span></td>
+                <td>可选</td>
+                <td>适合小型车灯或紧凑空间防潮应用。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="窄版" data-mode="快吸款">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 1.5g 窄版车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>窄版</td>
+                <td><strong>1.5g</strong></td>
+                <td>1×12cm</td>
+                <td><span class="tag tag-cyan">快吸款</span></td>
+                <td>按需确认</td>
+                <td>适合狭长空间或插入式安装场景。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="窄版" data-mode="快吸款">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 1g 窄版车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>窄版</td>
+                <td><strong>1g</strong></td>
+                <td>1×8cm</td>
+                <td><span class="tag tag-cyan">快吸款</span></td>
+                <td>按需确认</td>
+                <td>适合空间较小的插入式防潮应用。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+
+              <tr data-type="窄版" data-mode="快吸款">
+                <td><div class="table-thumb"><img src="https://wisepac.com.cn/wp-content/uploads/2024/11/%E8%BD%A6%E7%81%AF%E5%B9%B2%E7%87%A5%E5%89%824.webp" alt="WiseAuto 0.5g 窄版车用干燥剂"></div></td>
+                <td><span class="tag tag-blue">WiseAuto</span></td>
+                <td>窄版</td>
+                <td><strong>0.5g</strong></td>
+                <td>1×5cm</td>
+                <td><span class="tag tag-cyan">快吸款</span></td>
+                <td>按需确认</td>
+                <td>适合小空间、局部防潮和定制化安装需求。</td>
+                <td><a class="table-action" href="https://wisepac.com.cn/contact-us/">获取报价</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="table-note">
+          注：以上规格依据页面展示内容整理。产品代码、包装数量、项目批量价格、背胶型号等信息可按客户项目需求进一步确认。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Core Advantages</div>
+        <h2>围绕车灯结构与使用环境提供防潮支持</h2>
+        <p>页面重点突出产品价值、应用场景、规格参数和询盘转化，更适合作为中文产品展示页使用。</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">💧</div>
+          <h3>高效吸湿</h3>
+          <p>适用于高温高湿等复杂环境下的车灯内部湿度控制需求。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🚘</div>
+          <h3>车灯适配</h3>
+          <p>可用于前照灯、尾灯、信号灯等密闭或半密闭灯具结构。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">⚙</div>
+          <h3>灵活规格</h3>
+          <p>宽版与窄版规格可选，方便适配不同安装空间和用量需求。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🧩</div>
+          <h3>定制支持</h3>
+          <p>可根据灯具结构、湿度控制目标和使用周期提供匹配方案。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="applications">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Applications</div>
+        <h2>适用应用场景</h2>
+        <p>适合对内部湿度、外观清晰度和长期稳定性有要求的汽车灯具及相关零部件场景。</p>
+      </div>
+
+      <div class="app-grid">
+        <article class="app-card">
+          <span>01</span>
+          <h3>汽车前照灯</h3>
+          <p>用于降低温差变化引起的内部起雾和凝露风险。</p>
+        </article>
+
+        <article class="app-card">
+          <span>02</span>
+          <h3>汽车尾灯</h3>
+          <p>适用于密封空间内的湿度控制，帮助保持灯具内部环境稳定。</p>
+        </article>
+
+        <article class="app-card">
+          <span>03</span>
+          <h3>信号灯与灯具组件</h3>
+          <p>可应用于多类汽车灯具及相关零部件的储运和装配环节。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>需要车灯防潮控湿方案？</h2>
+          <p>
+            可根据车灯结构、目标湿度、空间尺寸、吸湿速度和使用周期，沟通合适的 WiseAuto 车用干燥剂规格与应用方案。
+          </p>
+        </div>
+        <div class="cta-contact">
+          <a href="tel:4000021517">400-002-1517</a>
+          <span>联系 Wisepac 专家团队</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <a class="footer-logo" href="https://wisepac.com.cn/">
+          <img src="https://wisepac.com.cn/wp-content/uploads/2024/10/wisepac-write.png" alt="Wisepac 威胜科技">
+        </a>
+        <p>
+          Wisepac 威胜科技专注于工业防潮、湿度控制与吸附材料相关产品，为不同工业应用场景提供稳定可靠的控湿解决方案。
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>产品中心</h3>
+        <ul>
+          <li><a href="https://wisepac.com.cn/products/">给入式干燥剂</a></li>
+          <li><a href="https://wisepac.com.cn/products/">吸湿包装材料</a></li>
+          <li><a href="https://wisepac.com.cn/products/">湿度指示配件</a></li>
+          <li><a href="https://wisepac.com.cn/products/">干燥剂原料</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>快速链接</h3>
+        <ul>
+          <li><a href="https://wisepac.com.cn/about-us/">关于我们</a></li>
+          <li><a href="https://wisepac.com.cn/case-studies/">资源与应用</a></li>
+          <li><a href="https://wisepac.com.cn/sustainability/">可持续发展</a></li>
+          <li><a href="https://wisepac.com.cn/contact-us/">联系我们</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>联系我们</h3>
+        <p>昆山威胜干燥剂有限公司</p>
+        <p>中国 江苏省 昆山市 淀山湖镇 淀兴路97号</p>
+        <p>邮箱：info@wisepac.com</p>
+        <p>电话：+86 400-002-1517</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>Copyright ©2026 昆山威胜干燥剂有限公司 版权所有</span>
+      <span>苏ICP备18054600号-4</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mainNav = document.getElementById("mainNav");
+
+  if (menuBtn && mainNav) {
+    menuBtn.addEventListener("click", function () {
+      mainNav.classList.toggle("open");
+    });
+  }
+
+  const tableSearch = document.getElementById("tableSearch");
+  const typeFilter = document.getElementById("typeFilter");
+  const modeFilter = document.getElementById("modeFilter");
+  const tableRows = document.querySelectorAll("#productTableBody tr");
+
+  function filterTable() {
+    const keyword = (tableSearch.value || "").trim().toLowerCase();
+    const selectedType = typeFilter.value;
+    const selectedMode = modeFilter.value;
+
+    tableRows.forEach(function (row) {
+      const rowText = row.innerText.toLowerCase();
+      const rowType = row.getAttribute("data-type");
+      const rowMode = row.getAttribute("data-mode");
+
+      const matchesKeyword = !keyword || rowText.includes(keyword);
+      const matchesType = selectedType === "all" || rowType === selectedType;
+      const matchesMode = selectedMode === "all" || rowMode === selectedMode;
+
+      row.classList.toggle("is-hidden", !(matchesKeyword && matchesType && matchesMode));
+    });
+  }
+
+  if (tableSearch && typeFilter && modeFilter) {
     tableSearch.addEventListener("input", filterTable);
     typeFilter.addEventListener("change", filterTable);
     modeFilter.addEventListener("change", filterTable);
-  </script>
+  }
+
+  const gallery = document.getElementById("autoGallery");
+  const slides = document.querySelectorAll(".slide");
+  const dotsWrap = document.getElementById("sliderDots");
+
+  let currentSlide = 0;
+  let sliderTimer = null;
+
+  function createDots() {
+    if (!dotsWrap || !slides.length) return;
+
+    dotsWrap.innerHTML = "";
+
+    slides.forEach(function (_, index) {
+      const dot = document.createElement("button");
+      dot.className = "slider-dot" + (index === 0 ? " active" : "");
+      dot.type = "button";
+      dot.setAttribute("aria-label", "切换到第" + (index + 1) + "张产品图");
+
+      dot.addEventListener("click", function () {
+        showSlide(index);
+        restartSlider();
+      });
+
+      dotsWrap.appendChild(dot);
+    });
+  }
+
+  function showSlide(index) {
+    if (!slides.length) return;
+
+    currentSlide = (index + slides.length) % slides.length;
+
+    slides.forEach(function (slide, i) {
+      slide.classList.toggle("active", i === currentSlide);
+    });
+
+    const dots = document.querySelectorAll(".slider-dot");
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle("active", i === currentSlide);
+    });
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function startSlider() {
+    stopSlider();
+    sliderTimer = setInterval(nextSlide, 4200);
+  }
+
+  function stopSlider() {
+    if (sliderTimer) {
+      clearInterval(sliderTimer);
+      sliderTimer = null;
+    }
+  }
+
+  function restartSlider() {
+    stopSlider();
+    startSlider();
+  }
+
+  if (gallery && slides.length) {
+    createDots();
+    startSlider();
+
+    gallery.addEventListener("mouseenter", stopSlider);
+    gallery.addEventListener("mouseleave", startSlider);
+  }
+</script>
 
 </body>
 </html>
